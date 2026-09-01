@@ -33,13 +33,13 @@ int main(void) {
 #endif
 
     // show the dialog
-    nfdopendialognargs_t args = {0};
+    nfdopendialogargs_t args = {0};
     args.filterList = filterItem;
     args.filterCount = 2;
     args.title = title;
     args.acceptLabel = acceptLabel;
     args.cancelLabel = cancelLabel;
-    nfdresult_t result = NFD_OpenDialogN_With(&outPath, &args);
+    nfdresult_t result = NFD_OpenDialog_With(&outPath, &args);
     if (result == NFD_OKAY) {
         puts("Success!");
 #ifdef _WIN32

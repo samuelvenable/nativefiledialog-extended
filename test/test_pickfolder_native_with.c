@@ -26,11 +26,11 @@ int main(void) {
 #endif
 
     // show the dialog
-    nfdpickfoldernargs_t args = {0};
+    nfdpickfolderargs_t args = {0};
     args.title = title;
     args.acceptLabel = acceptLabel;
     args.cancelLabel = cancelLabel;
-    nfdresult_t result = NFD_PickFolderN_With(&outPath, &args);
+    nfdresult_t result = NFD_PickFolder_With(&outPath, &args);
     if (result == NFD_OKAY) {
         puts("Success!");
 #ifdef _WIN32

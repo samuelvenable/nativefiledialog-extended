@@ -304,7 +304,7 @@ This API is experimental, and subject to change.
 
 You can define the following macros *before* including `nfd.h`/`nfd.hpp`:
 
-- `NFD_NATIVE`: Define this before including `nfd.h` to make non-suffixed function names and typedefs (e.g. `NFD_OpenDialog`) aliases for the native functions (e.g. `NFD_OpenDialogN`) instead of aliases for the UTF-8 functions (e.g. `NFD_OpenDialogU8`).  This macro does not affect the C++ wrapper `nfd.hpp`.
+- `NFD_NATIVE`: Define this before including `nfd.h` to make non-suffixed function names and typedefs (e.g. `NFD_OpenDialog`, `NFD_OpenDialog_With`, `nfdopendialogargs_t`) aliases for the native ones (e.g. `NFD_OpenDialogN`, `NFD_OpenDialogN_With`, `nfdopendialognargs_t`) instead of aliases for the UTF-8 ones (e.g. `NFD_OpenDialogU8`, `NFD_OpenDialogU8_With`, `nfdopendialogu8args_t`).  This macro does not affect the C++ wrapper `nfd.hpp`.
 - `NFD_THROWS_EXCEPTIONS`: (C++ only)  Define this before including `nfd.hpp` to make `NFD::Guard` construction throw `std::runtime_error` if `NFD_Init` fails.  Otherwise, there is no way to detect failure in `NFD::Guard` construction.
 
 Macros that might be defined by `nfd.h`:

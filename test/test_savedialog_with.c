@@ -17,7 +17,7 @@ int main(void) {
     nfdfilteritem_t filterItem[2] = {{"Source code", "c,cpp,cc"}, {"Header", "h,hpp"}};
 
     // show the dialog
-    nfdsavedialogu8args_t args = {0};
+    nfdsavedialogargs_t args = {0};
     args.filterList = filterItem;
     args.filterCount = 2;
     args.defaultName = "Untitled.c";
@@ -25,7 +25,7 @@ int main(void) {
     args.title = "Save your source file";
     args.acceptLabel = "Save it";
     args.cancelLabel = "Never mind";
-    nfdresult_t result = NFD_SaveDialogU8_With(&savePath, &args);
+    nfdresult_t result = NFD_SaveDialog_With(&savePath, &args);
     if (result == NFD_OKAY) {
         puts("Success!");
         puts(savePath);

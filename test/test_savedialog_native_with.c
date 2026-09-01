@@ -34,7 +34,7 @@ int main(void) {
 #endif
 
     // show the dialog
-    nfdsavedialognargs_t args = {0};
+    nfdsavedialogargs_t args = {0};
     args.filterList = filterItem;
     args.filterCount = 2;
     args.defaultName = defaultPath;
@@ -42,7 +42,7 @@ int main(void) {
     args.title = title;
     args.acceptLabel = acceptLabel;
     args.cancelLabel = cancelLabel;
-    nfdresult_t result = NFD_SaveDialogN_With(&savePath, &args);
+    nfdresult_t result = NFD_SaveDialog_With(&savePath, &args);
     if (result == NFD_OKAY) {
         puts("Success!");
 #ifdef _WIN32
